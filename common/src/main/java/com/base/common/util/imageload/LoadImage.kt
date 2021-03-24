@@ -4,9 +4,8 @@ import android.widget.ImageView
 import java.io.File
 
 object LoadImage : LoadEngine {
-    //const val imgUrl = "http://img1.imgtn.bdimg.com/it/u=1004510913,4114177496&fm=26&gp=0.jpg"
     const val imgUrl =
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583902813407&di=e5c444a2a80d5561d59d2866e3d2b8b8&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F68%2F61%2F300000839764127060614318218_950.jpg"
+        "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc1cb0016ce599fff96fcaacd3e01452cffc3c8c1a066c-3qtAwO_fw236&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619171623&t=9a878cb48b953a4f36f6382283739fbb"
 
     private val glideEngine: LoadEngine by lazy { GlideEngine() }
     private val coilEngine: LoadEngine by lazy { CoilEngine() }
