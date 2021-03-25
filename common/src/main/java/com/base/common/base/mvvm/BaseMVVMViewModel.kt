@@ -54,7 +54,7 @@ abstract class BaseMVVMViewModel : ViewModel() {
 
         //CancellationException 协程取消异常，由于detachView主动取消了协程，此时view为空，无法在基类中捕获
         if (e is CancellationException) {
-            AndroidUtil.showToast("协程被取消")
+            AndroidUtil.showToast(null, "协程被取消")
         } else {
             error.postValue(e)
         }

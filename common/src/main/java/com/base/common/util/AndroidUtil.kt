@@ -152,8 +152,8 @@ object AndroidUtil {
         context.startActivity(intent)
     }
 
-    fun showToast(msg: String) {
-        val toast = Toast.makeText(BaseAPP.baseAppContext, msg, Toast.LENGTH_SHORT)
+    fun showToast(context: Context?, msg: String) {
+        val toast = Toast.makeText(context ?: BaseAPP.baseAppContext, msg, Toast.LENGTH_SHORT)
         toast.setGravity(Gravity.CENTER, 0, 0)
         toast.show()
     }

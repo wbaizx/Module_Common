@@ -184,12 +184,12 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
      */
     open fun runError(e: Exception) {
         when (e) {
-            is SocketTimeoutException -> AndroidUtil.showToast("连接超时")
-            is UnknownHostException -> AndroidUtil.showToast("网络错误")
-            is NoNetworkException -> AndroidUtil.showToast("无网络")
-            is MalformedJsonException -> AndroidUtil.showToast("json解析错误")
-            is CodeException -> AndroidUtil.showToast("服务器code码错误 + code=${e.message}")
-            else -> AndroidUtil.showToast("未知错误")
+            is SocketTimeoutException -> AndroidUtil.showToast(this, "连接超时")
+            is UnknownHostException -> AndroidUtil.showToast(this, "网络错误")
+            is NoNetworkException -> AndroidUtil.showToast(this, "无网络")
+            is MalformedJsonException -> AndroidUtil.showToast(this, "json解析错误")
+            is CodeException -> AndroidUtil.showToast(this, "服务器code码错误 + code=${e.message}")
+            else -> AndroidUtil.showToast(this, "未知错误")
         }
     }
 
